@@ -1,0 +1,891 @@
+@font-face {
+	font-family: 'Jost Bold'; 
+	src: url(/fonts/jost_bold.ttf);
+}
+@font-face {
+	font-family: 'Jost Semi Bold'; 
+	src: url(/fonts/jost_semi_bold.ttf);
+}
+
+@font-face {
+	font-family: 'Jost Regular'; 
+	src: url(/fonts/jost_regular.ttf);
+}
+
+.container_nav {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    justify-items: center;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo logo logo logo menu_about_school menu_about_school trends price price phone phone phone";
+    background-color: #141024;
+    }
+
+.logo { grid-area: logo;
+    justify-self: start;
+    color: white;
+    margin: 30px;
+    font-family: 'Jost Bold';
+    text-decoration: none;
+    font-size: 2vw;
+    }
+
+.menu_about_school { grid-area: menu_about_school;
+    justify-self: end;
+    color: white;
+    margin: 30px 0;
+    font-family: 'Jost Regular';
+    text-decoration: none;
+    font-size:calc(5px + 1vw);
+    }
+
+.menu_about_school:hover {
+    color: bisque;
+    text-decoration: underline;
+    }
+
+.trends { grid-area: trends;
+    color: white;
+    margin: 30px 0;
+    font-family: 'Jost Regular';
+    text-decoration: none;
+    font-size:calc(5px + 1vw);
+    }
+
+.trends:hover {
+    color: bisque;
+    text-decoration: underline;
+    }
+
+.price { grid-area: price;
+    justify-self: start;
+    color: white;
+    margin: 30px 0;
+    font-family: 'Jost Regular';
+    text-decoration: none;
+    font-size:calc(5px + 1vw);
+    }
+
+.price:hover {
+    color: bisque;
+    text-decoration: underline;
+    }
+
+.phone { grid-area: phone; 
+    justify-self: end;
+    color: white;
+    margin: 30px;
+    font-family: 'Jost Semi Bold';
+    text-decoration: none;
+    font-size: 2vw;
+    }
+
+.container_logo {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+       ". img_logo"
+       "school_name img_logo"
+       "courses_name img_logo"
+       "button_name img_logo"
+       ". img_logo"
+       ". img_logo";
+    background-color: #141024;
+    height: 50vw;
+    }
+      
+.img_logo { grid-area: img_logo; 
+    align-self: self-end;
+    }
+    
+.img_logo_girl{ width: 40vw;    
+    }
+
+.school_name { grid-area: school_name; 
+    justify-self: start;
+    color: white;
+    font-family: 'Jost Semi Bold';
+    text-decoration: none;
+    font-size: 2vw;
+    margin-left: 16vw;
+    }
+
+.courses_name { grid-area: courses_name; 
+    justify-self: start;
+    color: white;
+    font-family: 'Jost Regular';
+    text-decoration: none;
+    font-size: 1.4vw;
+    margin-left: 16vw;
+    }
+    
+.button_name { grid-area: button_name; 
+    margin-top: 2vw;
+    }
+
+.craft_button{
+    background-color: red;
+    border-radius: 7px;
+    border: 2px solid red;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    color: white;
+    margin-left: 16vw;
+    cursor: pointer;
+    padding: 2vw;
+    text-decoration: none;
+    }
+
+.craft_button:hover {   
+    border:2px dashed white ;
+    }
+
+.container_body {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    width: 65vw;
+    margin: 0 auto;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "body_name body_name body_name body_name body_name body_name body_name body_name body_name . . ."
+      "number_10 number_10 number_10 number_20 number_20 number_20 number_100 number_100 number_100 number_10000 number_10000 number_10000"
+      "text_number_10 text_number_10 text_number_10 text_number_20 text_number_20 text_number_20 next_number_100 next_number_100 next_number_100 text_number_10000 text_number_10000 text_number_10000"
+      "body_name_courses body_name_courses body_name_courses body_name_courses body_name_courses body_name_courses body_name_courses body_name_courses body_name_courses body_name_courses body_name_courses body_name_courses"
+      "name_courses_1 name_courses_1 name_courses_1 name_courses_1 name_courses_2 name_courses_2 name_courses_2 name_courses_2 name_courses_3 name_courses_3 name_courses_3 name_courses_3"
+      "name_body_courses_1 name_body_courses_1 name_body_courses_1 name_body_courses_1 name_body_courses_2 name_body_courses_2 name_body_courses_2 name_body_courses_2 name_body_courses_3 name_body_courses_3 name_body_courses_3 name_body_courses_3";
+    }
+  
+.body_name { grid-area: body_name; 
+    font-family: 'Jost Regular';
+    font-size: 2vw;
+    }
+
+.body_name span{
+    font-family: 'Jost Semi Bold';
+    }
+    
+.number_10 { grid-area: number_10; 
+    color: #D52027;
+    font-family: 'Jost Semi Bold';
+    font-size: 2.5vw;
+    justify-self: start;
+    align-self: self-end;
+    }
+  
+.number_20 { grid-area: number_20; 
+    color: #D52027;
+    font-family: 'Jost Semi Bold';
+    font-size: 2.5vw;
+    justify-self: start;
+    align-self: self-end;
+    }
+  
+.number_100 { grid-area: number_100; 
+    color: #D52027;
+    font-family: 'Jost Semi Bold';
+    font-size: 2.5vw;
+    justify-self: start;
+    align-self: self-end;
+    }
+  
+.number_10000 { grid-area: number_10000;
+    color: #D52027;
+    font-family: 'Jost Semi Bold';
+    font-size: 2.5vw;
+    justify-self: start;
+    align-self: self-end;
+    }
+  
+.text_number_10 { grid-area: text_number_10; 
+    color: rgba(20, 16, 36, 0.7);
+    font-family: 'Jost Regular';
+    font-size:calc(5px + 1vw);
+    justify-self: start;
+    padding-right: 10px;
+    }
+  
+.text_number_20 { grid-area: text_number_20; 
+    color: rgba(20, 16, 36, 0.7);
+    font-family: 'Jost Regular';
+    font-size:calc(5px + 1vw);
+    justify-self: start;
+    padding-right: 10px;
+    }
+  
+.next_number_100 { grid-area: next_number_100; 
+    color: rgba(20, 16, 36, 0.7);
+    font-family: 'Jost Regular';
+    font-size:calc(5px + 1vw);
+    justify-self: start;
+    padding-right: 10px;
+    }
+  
+.text_number_10000 { grid-area: text_number_10000; 
+    color: rgba(20, 16, 36, 0.7);
+    font-family: 'Jost Regular';
+    font-size:calc(5px + 1vw);
+    justify-self: start;
+    padding-right: 10px;
+    }
+  
+.body_name_courses { grid-area: body_name_courses;
+    color: #141024;
+    font-family: 'Jost Semi Bold';
+    font-size:1.5vw;
+    justify-self: start;
+    }
+
+.name_courses_1 { grid-area: name_courses_1; 
+    color: #141024;
+    font-family: 'Jost Semi Bold';
+    font-size:calc(5px + 1.2vw);
+    justify-self: start;
+    align-self: self-end;
+    }
+  
+.name_courses_2 { grid-area: name_courses_2;
+    color: #141024;
+    font-family: 'Jost Semi Bold';
+    font-size:calc(5px + 1.2vw);
+    justify-self: start;
+    align-self: self-end;
+    }
+  
+.name_courses_3 { grid-area: name_courses_3; 
+    color: #141024;
+    font-family: 'Jost Semi Bold';
+    font-size:calc(5px + 1.2vw);
+    justify-self: start;
+    align-self: self-end;
+    }
+
+  
+.name_body_courses_1 { grid-area: name_body_courses_1; 
+    color: rgba(20, 16, 36, 0.7);
+    font-family: 'Jost Regular';
+    font-size:calc(5px + 1vw);
+    justify-self: start;
+    padding-right: 30px;
+    }
+  
+.name_body_courses_2 { grid-area: name_body_courses_2; 
+    color: rgba(20, 16, 36, 0.7);
+    font-family: 'Jost Regular';
+    font-size:calc(5px + 1vw);
+    justify-self: start;
+    padding-right: 30px;
+    }
+  
+.name_body_courses_3 { grid-area: name_body_courses_3;
+    color: rgba(20, 16, 36, 0.7);
+    font-family: 'Jost Regular';
+    font-size:calc(5px + 1vw);
+    justify-self: start;
+    padding-right: 30px;
+    }
+  
+.container_teacher {
+    display: grid; 
+    width: 65vw;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr; 
+    gap: 0px 5vw; 
+    grid-template-areas: 
+     "prof prof prof prof prof prof prof prof prof prof prof prof"
+     "teacher_courses teacher_courses teacher_courses teacher_courses teacher_courses teacher_courses teacher_courses teacher_courses teacher_courses teacher_courses teacher_courses teacher_courses"
+     "package package package package package package package package package package package package"
+     "price_1 price_1 price_1 price_1 price_2 price_2 price_2 price_2 price_3 price_3 price_3 price_3"; 
+    }
+
+.prof {grid-area: prof; 
+    color: #141024;
+    font-family: 'Jost Semi Bold';
+    font-size:2vw;
+    justify-self: start;
+    }
+
+.teacher_courses {grid-area: teacher_courses;   
+    }
+
+.package {grid-area: package; 
+    color: #141024;
+    font-family: 'Jost Semi Bold';
+    font-size:2vw;
+    }
+
+.price_1 { grid-area: price_1; 
+    border: 1px solid rgba(20, 16, 36, 0.2);
+    border-radius: 20px;
+    height: 20vw;
+    padding: 0.2vw;
+    width: 17vw;  
+    }
+
+.price_title{
+    font-family: 'Jost Semi Bold';
+    font-size:1.5vw;
+    text-align: center;
+    color:#141024;
+    }
+
+.price_price{
+    font-family: 'Jost Semi Bold';
+    font-size:1.5vw;
+    text-align: center;
+    color:#141024;
+    }
+
+.price_name{
+    font-family: 'Jost Regular';
+    font-size:1.5vw;
+    text-align: center;
+    color:#141024;
+    }
+
+.price_button{
+    display: block;
+    margin: 0 auto;
+    background-color: red;
+    border-radius: 5px;
+    border: 2px solid red;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    color: white;
+    text-decoration:  none;
+    padding: 1vw;
+    cursor: pointer;
+
+    }
+
+.price_button:hover{
+    border:2px dashed white;
+    }
+
+.link_price_button{
+    text-decoration: none;
+    width: 10vw;
+    cursor: default;
+text-align: center;
+cursor: pointer;
+}
+
+.price_1:hover { 
+    color: white;
+    background-color: #141024;
+    transition: all 0.3s ease-in-out;
+    }
+
+.price_1:hover .price_title{
+    color: white;
+    }
+    
+.price_1:hover .price_price {
+    color: white;
+    }
+
+.price_1:hover .price_name{
+    color: white;
+    }
+
+.price_2 { grid-area: price_2; 
+    border: 1px solid rgba(20, 16, 36, 0.2);
+    border-radius: 20px;
+    height: 20vw;
+    padding: 0.2vw;
+    width: 17vw;  
+    }
+
+.price_2:hover { 
+    color: white;
+    background-color: #141024;
+    transition: all 0.3s ease-in-out;
+    }
+    
+.price_2:hover .price_title{
+    color: white;
+    }
+    
+.price_2:hover .price_price {
+    color: white;
+    }
+
+.price_2:hover .price_name{
+    color: white;
+    }
+
+.price_3 { grid-area: price_3; 
+    border: 1px solid rgba(20, 16, 36, 0.2);
+    border-radius: 20px;
+    height: 20vw;
+    padding: 0.2vw;
+    width: 17vw;  
+    }
+
+.price_3:hover { 
+    color: white;
+    background-color: #141024;
+    transition: all 0.3s ease-in-out;
+    }
+    
+.price_3:hover .price_title{
+    color: white;
+    }
+        
+.price_3:hover .price_price {
+    color: white;
+    }
+
+.price_3:hover .price_name{
+    color: white;
+    }
+
+.container_form {  display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 20vw;
+    background-image: url('../img/sale.svg');
+    background-color: #D52027;
+    background-size: 70vw;
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    margin: 0 auto;
+    grid-template-rows: 0.5fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    padding-left: 17vw;
+    padding-top: 5vw;
+    grid-template-areas:
+    "title_form title_form title_form title_form title_form title_form form_form form_form form_form form_form form_form form_form"
+    "sub_title_form sub_title_form sub_title_form sub_title_form sub_title_form sub_title_form form_form form_form form_form form_form form_form form_form";
+    }
+      
+.title_form { grid-area: title_form; 
+    font-family: 'Jost Semi Bold';
+    font-size:1.5vw;
+    color:white;
+    }
+      
+.sub_title_form { grid-area: sub_title_form; 
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    color: white;
+    }
+      
+.form_form { grid-area: form_form;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    }
+    
+.form_form_class{
+    font-family: 'Jost Regular';
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    margin: 0.5vw;
+    width: 25vw;
+    height: 2.5vw;
+    border-radius: 0.3vw;
+    border: none;
+    }
+
+.button_form_class{
+    font-family: 'Jost Regular';
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    margin: 0.5vw;
+    width: 26vw;
+    height: 2.5vw;
+    border-radius: 0.3vw;
+    border: none;
+    background-color: #141024;
+    color: white;
+    }
+
+.button_form_class:hover{
+    cursor: pointer;
+    background-color: #141024e8;
+    }
+
+.container_footer {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    background-color: #141024;
+    color: white;
+    padding: 1vw;
+    height: 2.5vw;
+    }
+      
+.footer_name_school { grid-area: 1 / 1 / 3 / 2;
+    font-family: 'Jost Bold';
+    font-size: 1vw;
+    padding-left: 5vw;
+    }
+      
+.copyright_footer { grid-area: 2 / 1 / 3 / 2;
+    font-family: 'Jost Regular';
+    font-size: 0.5vw;
+    padding-top: 0.5vw;
+    padding-left: 5vw;
+    }
+      
+.phone_footer { grid-area: 1 / 2 / 3 / 3; 
+    font-family: 'Jost Bold';
+    font-size: 1vw;
+    padding-left: 5vw;
+    align-self: center;
+    justify-self: end;
+    padding-right: 5vw;
+    }
+
+.btn_click_dialog{
+    background: none;
+    border: none;
+    color: #D52027;
+    font-family: 'Jost Regular';
+    font-size: calc(5px + 1vw);
+    cursor:pointer;
+    }
+
+#dialog_1::backdrop {
+    background-color: rgba(20, 16, 36, 0.9);
+    }
+
+#dialog_2::backdrop {
+    background-color: rgba(20, 16, 36, 0.9);
+    }
+       
+#dialog_3::backdrop {
+    background-color: rgba(20, 16, 36, 0.9);
+    }
+    
+#dialog_4::backdrop {
+    background-color: rgba(20, 16, 36, 0.9);
+    }
+
+#dialog_5::backdrop {
+    background-color: rgba(20, 16, 36, 0.9);
+    }
+
+.dialog_top{
+    border-radius: 1vw;
+    border: none;
+    outline: none;
+    }
+
+.container_dialog {  display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    width: 60vw;
+    border-radius: 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "foto_dialog foto_dialog foto_dialog foto_dialog name_dialog name_dialog name_dialog name_dialog name_dialog name_dialog close_dialog close_dialog"
+    "foto_dialog foto_dialog foto_dialog foto_dialog profession_dialog profession_dialog profession_dialog profession_dialog profession_dialog profession_dialog profession_dialog profession_dialog"
+    "foto_dialog foto_dialog foto_dialog foto_dialog face_dialog insta_dialog . . . . . .";
+    }
+      
+.name_dialog { grid-area: name_dialog; 
+    font-family: 'Jost Bold';
+    font-size: 1.2vw;
+    color: #141024;
+    }
+      
+.foto_dialog { grid-area: foto_dialog; 
+    margin: 0.5vw;
+    }
+      
+.close_dialog { grid-area: close_dialog; 
+    text-align: center;
+    justify-self: end;
+    margin-top: 1.1vw;
+    }
+
+.close_dialog_button{
+    background: none;
+    color: rgba(20, 16, 36, 0.7);
+    border: none;
+    font-family: 'Jost Regular';
+    font-size: calc(2px + 0.8vw);
+    cursor:pointer;
+    outline: none;
+    }
+
+.face_dialog { grid-area: face_dialog; 
+    justify-self: start;
+    }
+
+.insta_dialog { grid-area: insta_dialog; 
+    justify-self: start;
+    }
+      
+.foto_dialog_img{
+    width: 10vw;
+    }
+
+.profession_dialog{
+    grid-area: profession_dialog; 
+    color: rgba(20, 16, 36, 0.7);
+    font-family: 'Jost Regular';
+    font-size: calc(2px + 1vw);
+    }
+
+.container_dialog_info { width: 100%;
+    padding: 0px;
+    margin: 0 auto; 
+    }
+
+.container_dialog_info_1>input { display: none; 
+    }
+
+.container_dialog_info_1>div {
+    display: none;
+    padding: 1vw;
+    width: 60vw;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    height: 22vw;
+    }
+
+.container_dialog_info_1>label {
+    display: inline-block;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    padding-right: 15vw;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    padding-left: 1vw;
+    cursor: pointer;
+    }
+
+.container_dialog_info_1>input:checked + label {
+    color: red;
+    }
+
+#tab_1_1:checked ~ #txt_1_1,
+#tab_2_1:checked ~ #txt_2_1,
+#tab_3_1:checked ~ #txt_3_1 { display: block; }
+
+#txt_1_1{overflow-y: scroll;
+    }
+
+#txt_2_1{overflow-y: scroll;
+    }
+
+#txt_3_1{overflow-y: scroll;
+    }
+
+.container_dialog_info_2>input { display: none; 
+    }
+
+.container_dialog_info_2>div {
+    display: none;
+    padding: 1vw;
+    width: 60vw;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    height: 22vw;
+    }
+
+.container_dialog_info_2>label {
+    display: inline-block;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    padding-right: 15vw;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    padding-left: 1vw;
+    cursor: pointer;
+    }
+
+.container_dialog_info_2>input:checked + label {
+    color: red;
+    }
+
+#tab_1_2:checked ~ #txt_1_2,
+#tab_2_2:checked ~ #txt_2_2,
+#tab_3_2:checked ~ #txt_3_2 { display: block; }
+
+#txt_1_2{overflow-y: scroll;
+    }
+
+#txt_2_2{overflow-y: scroll;
+    }
+
+#txt_3_2{overflow-y: scroll;
+    }
+
+.container_dialog_info_3>input { display: none; 
+    }
+
+.container_dialog_info_3>div {
+    display: none;
+    padding: 1vw;
+    width: 60vw;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    height: 22vw;
+    }
+
+.container_dialog_info_3>label {
+    display: inline-block;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    padding-right: 15vw;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    padding-left: 1vw;
+    cursor: pointer;
+    }
+
+.container_dialog_info_3>input:checked + label {
+    color: red;
+    }
+
+#tab_1_3:checked ~ #txt_1_3,
+#tab_2_3:checked ~ #txt_2_3,
+#tab_3_3:checked ~ #txt_3_3 { display: block; }
+
+#txt_1_3{overflow-y: scroll;
+    }
+
+#txt_2_3{overflow-y: scroll;
+    }
+
+#txt_3_3{overflow-y: scroll;
+    }
+
+.container_dialog_info_4>input { display: none; 
+    }
+
+.container_dialog_info_4>div {
+    display: none;
+    padding: 1vw;
+    width: 60vw;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    height: 22vw;
+    }
+
+.container_dialog_info_4>label {
+    display: inline-block;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    padding-right: 15vw;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    padding-left: 1vw;
+    cursor: pointer;
+    }
+
+.container_dialog_info_4>input:checked + label {
+    color: red;
+    }
+
+#tab_1_4:checked ~ #txt_1_4,
+#tab_2_4:checked ~ #txt_2_4,
+#tab_3_4:checked ~ #txt_3_4 { display: block; }
+
+#txt_1_4{overflow-y: scroll;
+    }
+
+#txt_2_4{overflow-y: scroll;
+    }
+
+#txt_3_4{overflow-y: scroll;
+    }
+
+.container_dialog_info_5>input { display: none; 
+    }
+
+.container_dialog_info_5>div {
+    display: none;
+    padding: 1vw;
+    width: 60vw;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    height: 22vw;
+    }
+
+.container_dialog_info_5>label {
+    display: inline-block;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    padding-right: 15vw;
+    font-family: 'Jost Regular';
+    font-size: 1vw;
+    padding-left: 1vw;
+    cursor: pointer;
+    }
+
+.container_dialog_info_5>input:checked + label {
+    color: red;
+    }
+
+#tab_1_5:checked ~ #txt_1_5,
+#tab_2_5:checked ~ #txt_2_5,
+#tab_3_5:checked ~ #txt_3_5 { display: block; }
+
+#txt_1_5{overflow-y: scroll;
+    }
+
+#txt_2_5{overflow-y: scroll;
+    }
+
+#txt_3_5{overflow-y: scroll;
+    }
+
+.dialog_top_app{
+    width: 20vw;
+    height: 10vw;
+    border-radius: 1vw;
+    border: none;
+    outline: none;
+    background-color: #D52027;
+    }
+
+.dialog_top_app::backdrop {
+    background-color: rgba(20, 16, 36, 0.9);
+    }
+
+.name_dialog_app{
+    text-align: center;
+    font-family: 'Jost Bold';
+    font-size: 1vw;
+    color: white;
+    }
+
+.close_dialog_app{
+    text-align: center;
+    margin-top: 4vw;
+   } 
+
+.close_dialog_button_app{
+    width: 7vw;
+    height: 2vw;
+    border: none;
+    color: white;
+    font-family: 'Jost Bold';
+    font-size: 0.8vw;
+    background-color: #141024;
+    cursor: pointer;
+    border-radius: 0.3vw;
+    }
+
+.close_dialog_button_app:hover{
+    background-color: #141024ee;
+    }
